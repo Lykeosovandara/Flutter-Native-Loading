@@ -3,8 +3,14 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ProgressBar
+<!--    <ProgressBar-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"></ProgressBar>-->
+    <com.keo.flutter_native_loading.Adapter.ProgressDialog
+        android:layout_width="55dp"
+        android:maxWidth="0.50dp"
+        android:minWidth="0.50dp"
         android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ProgressBar>
+        android:layout_height="55dp"/>
 </RelativeLayout>
