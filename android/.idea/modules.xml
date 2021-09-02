@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/flutter_native_loading.iml" filepath="$PROJECT_DIR$/flutter_native_loading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flutter_native_loading.iml" filepath="$PROJECT_DIR$/.idea/modules/flutter_native_loading.iml" />
     </modules>
   </component>
 </project>
