@@ -1,6 +1,4 @@
-import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_native_loading/flutter_native_loading.dart';
 
 void main() => runApp(MyApp());
@@ -10,13 +8,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> with AfterLayoutMixin {
-  @override
-  void initState() {
-    super.initState();
-    FlutterNativeLoading.show();
-  }
-
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,12 +16,18 @@ class _MyAppState extends State<MyApp> with AfterLayoutMixin {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              FlutterNativeLoading.show();
+              Future.delayed(new Duration(seconds: 1), () {
+                FlutterNativeLoading.hide();
+              });
+            },
+            child: Text('Progress Indicator'),
+          ),
+        ),
       ),
     );
-  }
-
-  @override
-  void afterFirstLayout(BuildContext context) {
-    // FlutterNativeLoading.hide();
   }
 }
